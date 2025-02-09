@@ -101,7 +101,7 @@ img {
 		background-color: #2e4156;
 		border-radius: 1.25rem;
 		&:hover {
-			scale: 1.02;
+			transform: scale(1.02);
 		}
 	}
 	&__link {
