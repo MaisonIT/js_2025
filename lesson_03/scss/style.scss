@@ -1,0 +1,121 @@
+/* * Підключення обнулення */
+@import "_reset.scss";
+
+/* * Підключення шрифтів */
+@import "_fonts.scss";
+
+// Mixins
+
+@mixin imageSize($width, $hight, $object-fit) {
+	width: $width;
+	height: $hight;
+	object-fit: $object-fit;
+}
+
+/* * Стандартні властивості */
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 1rem;
+}
+* {
+	scroll-margin-top: 5rem;
+}
+body {
+	height: 100%;
+	font-family: "Manrope", sans-serif;
+	font-weight: normal;
+	background-color: #e1d4c2;
+}
+a,
+button,
+div,
+article,
+path,
+span,
+::after,
+::before {
+	transition: 0.4s all;
+}
+img {
+	@include imageSize(100%, 100%, cover);
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+
+/* * Основні стилі */
+
+/* Обмежуючий контейнер */
+
+[class*="__container"] {
+	max-width: 81.25rem;
+	padding-inline: 0.9375rem;
+	margin-inline: auto;
+}
+
+// ** Блок header
+.wrapper {
+}
+.header {
+	text-align: center;
+	&__container {
+		background-color: #aab7b7;
+		padding: 1.25rem;
+	}
+
+	&__body {
+	}
+
+	&__title {
+		color: cyan;
+		font-size: 2.5rem;
+		text-shadow:
+			0px 0px 10px cyan,
+			0px 0px 20px cyan,
+			0px 0px 40px cyan,
+			0px 0px 80px cyan;
+	}
+}
+.main {
+	&__container {
+		padding: 50px;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.875rem;
+	}
+
+	&__item {
+		padding: 0.625rem;
+		background-color: #2e4156;
+		border-radius: 1.25rem;
+		&:hover {
+			transform: scale(1.02);
+		}
+	}
+	&__link {
+		display: inline-block;
+		font-size: 1.25rem;
+		margin-block-end: 0.625rem;
+		color: cyan;
+	}
+	&__title {
+		color: #c0c8ca;
+		margin-block-end: 10px;
+		line-height: 2;
+	}
+
+	&__img {
+		max-width: 12.5rem;
+	}
+}
+.footer {
+}
