@@ -1,0 +1,80 @@
+button {
+	margin-inline-start: 1.25rem;
+	padding-inline: 1.25rem;
+	padding-block: 0.625rem;
+	background-color: #45aa96;
+	text-align: center;
+	&:not(:last-child) {
+		margin-block-end: 0.625rem;
+	}
+	&:hover {
+		background-color: gray;
+	}
+}
+.list {
+	li {
+		list-style: disc;
+	}
+}
+.table {
+	input {
+		background-color: white;
+		max-width: 6.25rem;
+	}
+	div {
+		max-width: 12.5rem;
+		&:not(:last-child) {
+			margin-block-end: 0.625rem;
+		}
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+.table {
+	table {
+		border: 2px solid black;
+	}
+	td {
+		padding: 0.0625rem;
+		border: 1px solid black;
+	}
+}
+.table-third {
+	display: flex;
+	gap: 1.875rem;
+	div {
+		&:not(:last-child) {
+			margin: 0;
+		}
+	}
+	table {
+		border: 2px solid black;
+	}
+	td {
+		padding: 0.0625rem;
+		border: 1px solid black;
+	}
+}
+.title {
+	div {
+		h1 {
+			margin-block-end: 10px;
+		}
+		hr {
+			height: 3px;
+			width: 100%;
+			background-color: black;
+			margin-block-end: 10px;
+		}
+	}
+}
+
+.game {
+	.items {
+		display: flex;
+		.item {
+			max-width: 12.5rem;
+			aspect-ratio: 200/200;
+		}
+	}
+}
